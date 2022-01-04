@@ -12,7 +12,7 @@ const aliases = ['aliases', 'алиасы']
 const description = 'Алиасы для команд'
 
 // Функция команды
-function execute(ctx, {commands, config}) {
+async function execute(ctx, {commands, config}) {
 
   // Отправка сообщения
   ctx.reply([

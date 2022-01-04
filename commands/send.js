@@ -15,7 +15,7 @@ const description = 'Отправка команды на сервер'
 const usage = '<название> <команда>'
 
 // Функция команды
-function execute(ctx, {Logger, Rcon, db}) {
+async function execute(ctx, {Logger, Rcon, db}) {
 
   // Проверка на наличие указанного сервера
   if (!ctx.args[0]) return ctx.reply('⛔ Вы не указали название сервера')

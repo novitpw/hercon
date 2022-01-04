@@ -15,7 +15,7 @@ const description = 'Помощь по команде'
 const usage = '<команда>'
 
 // Функция команды
-function execute(ctx, {Keyboard, commands, config}) {
+async function execute(ctx, {Keyboard, commands, config}) {
 
   // Создание клавиатуры
   const keyboard = Keyboard.keyboard([

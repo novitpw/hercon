@@ -12,7 +12,7 @@ const aliases = ['commands', 'cmds', 'команды', 'кмдс']
 const description = 'Список команд'
 
 // Функция команды
-function execute(ctx, {Keyboard, commands, config}) {
+async function execute(ctx, {Keyboard, commands, config}) {
 
   // Создание клавиатуры
   const keyboard = Keyboard.keyboard([
