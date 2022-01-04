@@ -22,7 +22,15 @@ const config = YAML.parse(readFileSync('config.yml', 'utf8'))
 const project = JSON.parse(readFileSync('package.json', 'utf8'))
 
 // Инициализация vk-io
-const vk = new VK({token: config.longpoll.token, pollingGroupId: config.longpoll.group_id, v: config.longpoll.version})
+const vk = new VK(config.longpoll.group_id
+
+  // При работе в группе
+  ? {token: config.longpoll.token, v: config.longpoll.version, pollingGroupId: config.longpoll.group_id}
+
+  // При работе на странице
+  : {token: config.longpoll.token, v: config.longpoll.version}
+)
+
 
 // Инициализация lowdb
 const adapter = new JSONFile('servers.json')

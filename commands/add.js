@@ -41,7 +41,7 @@ async function execute(ctx, {Keyboard, db}) {
   if (db.data.servers.find(server => server.name == ctx.args[0])) return ctx.reply(`⚠ Сервер с названием <<${ctx.args[0]}>> уже добавлен`)
 
   // Добавление сервера в БД
-  db.data.servers.push({name: ctx.args[0], host: host, port: port, password: ctx.args[2]})
+  db.data.servers.push({name: ctx.args[0], host: host, port: Number(port), password: ctx.args[2]})
 
   // Сохранение БД
   await db.write()
