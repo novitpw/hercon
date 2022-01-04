@@ -9,7 +9,7 @@ longpoll:
   # Версия
   version: 5.131
   # ID группы с ботом
-  group_id: ID
+  group_id: GROUP_ID
 
 # Настройки логирования
 logging:
@@ -21,6 +21,4 @@ general:
   # Символы команд
   command_symbols: ['/', '!']
   # ID пользователей с доступом к боту
-  users_ids:
-    - ID1
-    - ID2
+  users_ids: [ID_1, ID_2]

@@ -62,7 +62,7 @@ readdirSync('commands/').map(async file => {
   commands.push(command.default)
 })
 
-// Сообщение о подключении к VK API
+// Сообщение в лог о подключении к VK API
 Logger.logInfo('Connecting to the VK API ...')
 
 // Старт получения событий ВК
@@ -80,7 +80,7 @@ vk.updates.on('message_new', ctx => {
   // Деление текста на команду и аргументы
   if (config.general.command_symbols.includes(ctx.text[0])) [ctx.cmd, ...ctx.args] = ctx.text.slice(1).split(' ')
 
-  // Деление команды из messagePayload на команду и аргументы (для поддержки клавиатур ВКонтакте)
+  // Деление текста из messagePayload на команду и аргументы (для поддержки клавиатур ВКонтакте)
   if (ctx.messagePayload?.command) [ctx.cmd, ...ctx.args] = ctx.messagePayload.command.split(' ')
 
   // Игнорирование сообщений без команд
@@ -101,7 +101,7 @@ vk.updates.on('message_new', ctx => {
   // Заполнитель пустых полей
   ctx.fields_placeholder = '<не_найдено>'
 
-  // Сообщение в консоль о написании команды
+  // Сообщение в лог о написании команды
   Logger.logInfo(`${is_from_chat}${ctx.senderId} -> ${ctx.text} ${payload_command}`)
 
   // Выполнение команды
@@ -110,7 +110,7 @@ vk.updates.on('message_new', ctx => {
     // Обработка возможных ошибок
     .catch(error => {
 
-      // Сообщение в консоль
+      // Сообщение ошибки в лог
       Logger.logError(error.stack)
 
       // Сообщение пользователю

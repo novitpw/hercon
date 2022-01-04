@@ -12,7 +12,7 @@ const aliases = ['servers', 'servs', 'сервера', 'сервы']
 const description = 'Список серверов'
 
 // Функция команды
-async function execute(ctx, {db}) {
+function execute(ctx, {db}) {
 
   // Отправка сообщения пользователю
   ctx.reply([
