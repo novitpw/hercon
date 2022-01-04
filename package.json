@@ -1,0 +1,19 @@
+{
+  "name": "hercon",
+  "version": "1.0.0",
+  "description": "VK RCON bot for Minecraft servers",
+  "main": "core/core.js",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hepller/hercon.git"
+  },
+  "author": "hepller",
+  "license": "MIT",
+  "dependencies": {
+    "lowdb": "^3.0.0",
+    "rcon": "^1.1.0",
+    "vk-io": "^4.4.0",
+    "yaml": "^1.10.2"
+  }
+}
