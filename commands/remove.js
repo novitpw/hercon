@@ -6,7 +6,7 @@
  */
 
 // Алиасы команды
-const aliases = ['remove', 'rem', 'удалить']
+const aliases = ['remove', 'rem', 'удалить', 'r']
 
 // Описание команды
 const description = 'Удаление сервера'

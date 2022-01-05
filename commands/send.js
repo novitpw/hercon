@@ -6,7 +6,7 @@
  */
 
 // Алиасы команды
-const aliases = ['send', 'отправить']
+const aliases = ['send', 'отправить' 's']
 
 // Описание команды
 const description = 'Отправка команды на сервер'
